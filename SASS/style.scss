@@ -1,0 +1,969 @@
+$breakpoints: (xxsmall: (min-width:400px),
+    xsmall: (min-width:576px),
+    small: (min-width:768px),
+    medium: (min-width:992px),
+    large: (min-width:1200px),
+    xlarge: (min-width:1440px),
+    xxlarge: (min-width:1700px),
+);
+
+@mixin mq($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+
+    @if($size) {
+        @media #{$size} {
+            @content
+        }
+    }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Work+Sans:wght@100;200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+:root {
+    --font-color: rgb(129, 98, 98);
+    --light_font-color: rgb(151, 139, 139);
+    --girl_fontColor: rgb(230, 29, 123);
+    --boy_fontColor: rgb(57, 118, 231);
+    --decoration-font: 'Great Vibes', cursive;
+}
+
+body {
+    min-width: 320px;
+}
+
+.wrapper {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.startSection {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/IMG/mobile.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 7;
+
+    @include mq(xsmall) {
+        background-image: url(/IMG/mobile576.png);
+        background-size: center;
+    }
+
+    @include mq(small) {
+        background-image: url(/IMG/mobile768.png);
+        background-size: center;
+    }
+
+    @include mq(medium) {
+        background-image: url(/IMG/mobile992.png);
+        background-size: center;
+    }
+
+    @include mq(large) {
+        background-image: url(/IMG/mobile1200.png);
+    }
+
+    @include mq(xlarge) {
+        background-image: url(/IMG//mainBackground.png);
+    }
+}
+
+.start_textWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding: 10px;
+    background-color: white;
+    color: var(--font-color);
+
+    @include mq(large) {
+        padding: 10px 20px;
+    }
+}
+
+.start_introTitle {
+    padding: 12px 0px 15px 0px;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 3.7rem;
+    text-transform: uppercase;
+
+    @include mq(xsmall) {
+        font-size: 4rem;
+        padding: 12px 5px 15px 5px;
+    }
+
+    @include mq(medium) {
+        padding: 12px 15px 15px 15px;
+    }
+
+    @include mq(xlarge) {
+        font-size: 5rem;
+        padding: 20px 25px;
+    }
+}
+
+.start_introText {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+    @include mq(xsmall) {
+        font-size: 1.8rem;
+        padding: 12px 5px 15px 5px;
+    }
+
+    @include mq(medium) {
+        font-size: 2rem;
+    }
+
+    @include mq(xlarge) {
+        font-size: 2.2rem;
+    }
+}
+
+.wrapper_images {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
+
+.start_arrow {
+    position: absolute;
+    width: 85px;
+    top: 68%;
+    left: 70%;
+    cursor: pointer;
+
+    @include mq(xsmall) {
+        width: 100px;
+        left: 70%;
+    }
+
+    @include mq(small) {
+        top: 70%;
+        width: 110px;
+    }
+
+    @include mq(medium) {
+        top: 68%;
+    }
+
+    @include mq(large) {
+        width: 115px;
+    }
+
+    @include mq(xlarge) {
+        width: 120px;
+        top: 67%;
+        left: 73%;
+    }
+
+    @include mq(xxlarge) {
+        left: 68%;
+    }
+}
+
+.gender {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/IMG/mobile3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--font-color);
+    z-index: 6;
+
+    @include mq(xsmall) {
+        background-image: url(/IMG/mobile576.3.png);
+    }
+
+    @include mq(medium) {
+        background-image: url(/IMG/7.png);
+        background-size: center;
+    }
+}
+
+.gender_girlWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.589);
+    border-radius: 70px;
+    transition: 0.2s linear;
+
+    @include mq(xsmall) {
+        margin-right: 40%;
+        margin-bottom: 20%;
+    }
+
+    @include mq(medium) {
+        margin-bottom: 10%;
+    }
+
+    @include mq(large) {
+        margin-right: 50%;
+        width: 130px;
+        height: 130px;
+    }
+
+    @include mq(xxlarge) {
+        margin-bottom: 5%;
+    }
+}
+
+.gender_boyWrap:hover,
+.gender_girlWrap:hover {
+    background-color: white;
+}
+
+.gender_intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.gender_boyWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 100px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.589);
+    border-radius: 70px;
+    transition: 0.2s linear;
+
+    @include mq(xsmall) {
+        margin-left: 40%;
+        margin-top: 20%;
+    }
+
+
+    @include mq(medium) {
+        margin-top: 10%;
+    }
+
+
+    @include mq(large) {
+        margin-left: 50%;
+        width: 130px;
+        height: 130px;
+    }
+
+    @include mq(xxlarge) {
+        margin-top: 5%;
+
+    }
+}
+
+.gender_introTitle {
+    padding: 12px 10px 15px 10px;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 3.7rem;
+    text-transform: uppercase;
+
+    @include mq(xsmall) {
+        font-size: 4rem;
+        padding: 15px 20px;
+    }
+
+    @include mq(medium) {
+        padding: 25px 30px;
+    }
+
+
+    @include mq(large) {
+        padding: 25px 50px;
+    }
+
+    @include mq(xlarge) {
+        font-size: 5rem;
+        padding: 25px 70px;
+    }
+}
+
+.gender_introSubtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+
+    @include mq(xsmall) {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    @include mq(medium) {
+        padding-bottom: 20px;
+    }
+
+    @include mq(xlarge) {
+        font-size: 2.2rem;
+    }
+}
+
+.gender img {
+    width: 85px;
+
+    @include mq(xsmall) {
+        width: 115px;
+    }
+
+    @include mq(large) {
+        width: 150px;
+    }
+}
+
+.language {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/IMG/mobile2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--font-color);
+    z-index: 5;
+
+    @include mq(xsmall) {
+        background-image: url(/IMG/mobile576.2.png);
+    }
+
+    @include mq(medium) {
+        background-image: url(/IMG/12.png);
+    }
+}
+
+.language_polish {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.589);
+    border-radius: 50px;
+    transition: 0.2s linear;
+
+
+    @include mq(xsmall) {
+        margin-right: 40%;
+        margin-bottom: 20%;
+    }
+
+    @include mq(medium) {
+        margin-bottom: 10%;
+    }
+
+    @include mq(large) {
+        margin-right: 50%;
+    }
+
+    @include mq(xxlarge) {
+        margin-bottom: 5%;
+    }
+}
+
+.language_polish:hover,
+.language_english:hover {
+    background-color: white;
+}
+
+.language_intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 0 15px;
+}
+
+.language_english {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 100px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.589);
+    border-radius: 50px;
+    transition: 0.2s linear;
+
+    @include mq(xsmall) {
+        margin-left: 40%;
+        margin-top: 20%;
+    }
+
+    @include mq(medium) {
+        margin-top: 10%;
+    }
+
+    @include mq(large) {
+        margin-left: 50%;
+    }
+
+    @include mq(xxlarge) {
+        margin-top: 5%;
+    }
+}
+
+.language_introTitle {
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 3.7rem;
+    text-transform: uppercase;
+
+    @include mq(medium) {
+        padding: 25px 30px;
+    }
+
+    @include mq(large) {
+        padding: 25px 50px;
+    }
+
+    @include mq(xlarge) {
+        font-size: 5rem;
+    }
+}
+
+.language_introSubtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+    @include mq(medium) {
+        padding: 0 15px 20px 15px;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    @include mq(xlarge) {
+        font-size: 2.2rem;
+    }
+}
+
+.language img {
+    width: 85px;
+
+    @include mq(xsmall) {
+        width: 115px;
+    }
+
+    @include mq(large) {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+.generator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/IMG/background1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--font-color);
+    z-index: 4;
+
+}
+
+.generator_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px 0;
+    margin: 30px;
+
+
+    @include mq(large) {
+        padding: 10px 40px;
+    }
+}
+
+.generator_wrapTitle {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 3.7rem;
+    text-transform: uppercase;
+    padding: 10px;
+
+    @include mq(xsmall) {
+        font-size: 4rem;
+        padding: 20px 30px;
+    }
+
+    @include mq(medium) {
+        padding: 30px;
+        font-size: 4.5rem;
+    }
+}
+
+.generator_UI {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(medium) {
+        flex-direction: row;
+        width: 90vw;
+        height: 70vh;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.generator_UI h1 {
+    padding-top: 3px;
+    font-size: 1.4rem;
+    text-align: center;
+    letter-spacing: 1px;
+
+    @include mq(xsmall) {
+        font-size: 2rem;
+    }
+
+    @include mq(medium) {
+        padding-top: 10px;
+    }
+
+    @include mq(large) {
+        font-size: 2.2rem;
+    }
+}
+
+.generator_UI h2 {
+    padding-top: 3px;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 1px;
+
+    @include mq(xsmall) {
+        padding-top: 7px;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    @include mq(large) {
+        font-size: 2rem;
+    }
+
+    @include mq(medium) {
+        padding-top: 10px;
+        font-size: 1.5rem;
+    }
+
+    @include mq(large) {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+.generatorUI_tryAgain,
+.generatorUI_nameproposal,
+.generatorUI_approved {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    @include mq(large) {
+        width: 280px;
+    }
+}
+
+
+.generator img {
+    padding: 5px;
+    width: 90px;
+
+    @include mq(xsmall) {
+        padding: 10px;
+        width: 110px;
+    }
+
+    @include mq(large) {
+        width: 120px;
+    }
+
+    @include mq(medium) {
+        padding-bottom: 10px;
+        width: 130px;
+    }
+
+    @include mq(large) {
+        width: 150px;
+    }
+}
+
+.generator img:hover {
+    cursor: pointer;
+}
+
+.nameProposal {
+    padding-top: 5px;
+    font-size: 2rem;
+    font-weight: 400;
+    border-bottom: 1px dashed;
+    text-align: center;
+    color: var(--font-color);
+}
+
+
+.finalScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/IMG/congratulations_girl.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--font-color);
+    z-index: 2;
+}
+
+.finalScreen_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.finalScreen_wrapTitle {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3rem;
+    text-transform: uppercase;
+    padding: 10px 5px;
+
+    @include mq(xxsmall) {
+        font-size: 3.3rem;
+    }
+
+    @include mq(xsmall) {
+        font-size: 4rem;
+        padding: 20px 25px;
+    }
+
+    @include mq(medium) {
+        padding: 20px 35px;
+    }
+
+    @include mq(large) {
+        padding: 20px 75px;
+    }
+
+    @include mq(large) {
+        font-size: 4.8rem;
+        padding: 30px 75px;
+    }
+}
+
+.finalScreen_wrapSubtitle {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--light_font-color);
+
+
+    @include mq(xxsmall) {
+        font-size: 1.8rem;
+    }
+
+    @include mq(xsmall) {
+        font-size: 2rem;
+        padding-bottom: 20px;
+    }
+
+    @include mq(large) {
+        font-size: 2.3rem;
+    }
+}
+
+.finalName {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-family: 'Great Vibes', cursive;
+    color: var(--girl_fontColor);
+    border-radius: 50%;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    font-weight: bolder;
+
+    @include mq(xxsmall) {
+        font-size: 3.5rem;
+    }
+
+    @include mq(xsmall) {
+        font-size: 4rem;
+    }
+
+    @include mq(medium) {
+        position: absolute;
+        top: 60%;
+        right: 20%;
+        font-size: 4.5rem;
+    }
+
+    @include mq(large) {
+        font-size: 4.8rem;
+    }
+
+    @include mq(large) {
+        top: 65%;
+    }
+}
+
+.finalScreen img {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    width: 100%;
+
+    @include mq(xsmall) {
+        width: 80%;
+    }
+
+    @include mq(small) {
+        width: 70%;
+    }
+
+    @include mq(medium) {
+        width: 50%;
+    }
+
+    @include mq(xlarge) {
+        width: 50%;
+    }
+
+    @include mq(xxlarge) {
+        width: 40%;
+    }
+}
+
+.popUp {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    width: 230px;
+    height: 230px;
+    padding: 5px;
+    background-color: rgb(211, 236, 164);
+    border-radius: 70%;
+    transition: 2s linear;
+
+    @include mq(xsmall) {
+        top: 5%;
+        left: 5%;
+        width: 250px;
+        height: 250px;
+    }
+
+    @include mq(xlarge) {
+        top: 5%;
+        left: 10%;
+        width: 270px;
+        height: 270px;
+    }
+
+    @include mq(xxlarge) {
+        top: 5%;
+        left: 5%;
+        width: 270px;
+        height: 270px;
+    }
+}
+
+.popUp h1 {
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+
+    @include mq(xsmall) {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 1.7rem;
+    }
+
+    @include mq(xlarge) {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        font-size: 1.9rem;
+    }
+}
+
+.popUp h2,
+h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 10px 20px;
+
+    @include mq(xsmall) {
+        font-size: 1.5rem;
+    }
+
+    @include mq(xlarge) {
+        font-size: 1.7rem;
+    }
+}
+
+.popUp .cancel {
+    width: 12%;
+    transition: 0.2s linear;
+
+    @include mq(xsmall) {
+        width: 15%;
+    }
+
+    @include mq(xlarge) {
+        width: 17%;
+    }
+}
+
+.popUp .cancel:hover {
+    cursor: pointer;
+    transform: rotate(90deg)
+}
+
+.popUp .sadFace {
+    position: fixed;
+    left: 54%;
+    top: 25%;
+    width: 85px;
+    border-radius: 50%;
+    background-color: rgb(155, 234, 236);
+
+    @include mq(xxsmall) {
+        left: 50%;
+    }
+
+    @include mq(xsmall) {
+        top: 27%;
+        left: 35%;
+    }
+
+    @include mq(small) {
+        width: 90px;
+        top: 29%;
+        left: 25%;
+    }
+
+    @include mq(medium) {
+        top: 27%;
+        left: 20%;
+    }
+
+    @include mq(large) {
+        left: 18%;
+    }
+
+    @include mq(xlarge) {
+        top: 29%;
+        left: 21%;
+    }
+
+    @include mq(xxlarge) {
+        top: 27%;
+        left: 14%;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    width: 100vw;
+    z-index: 100;
+    text-align: center;
+}

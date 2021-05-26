@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.min.css">
+    <title>Baby name generator</title>
+</head>
+<body>
+<div class="wrapper"></div>
+<header class="startSection">
+    <div class="start_textWrapper">
+        <h1 class="start_introTitle">Baby name generator</h1>
+        <p class="start_introText">Find the perfect name for Your baby!</p>
+        <img class="start_arrow" src="IMG/scribble-broken-line.png">
+    </div>
+</header>
+<section class="gender">
+    <div class="gender_girlWrap genderIcon" data-gender="girl">
+        <img src="IMG/woman.png">
+        <img src="IMG/baby-girl.png">
+    </div>
+    <div class="gender_intro">
+        <h1 class="gender_introTitle">Boy or a girl?</h1>
+        <h1 class="gender_introSubtitle">Choose the gender</h1>
+    </div>
+    <div class="gender_boyWrap genderIcon" data-gender="boy">
+        <img src="IMG/baby-boy.png">
+        <img src="IMG/man.png">
+    </div>
+</section>
+<section class="language">
+    <div class="language_polish languageIcon" data-language="polish">
+        <img src="IMG/poland.png">
+    </div>
+    <div class="language_intro">
+        <h1 class="language_introTitle">Polish or English?</h1>
+        <h1 class="language_introSubtitle">Choose what kind of name do You preffer</h1>
+    </div>
+    <div class="language_english languageIcon" data-language="english">
+        <img src="IMG/united-kingdom.png">
+    </div>
+</section>
+<section class="generator">
+    <div class="generator_wrap">
+        <h1 class="generator_wrapTitle">It's a baby girl!</h1>
+        <section class="generator_UI">
+            <div class="generatorUI_tryAgain">
+                <img class="generatorUI_tryAgain_IMG "src="IMG/circular-arrow.png">
+                <h1 class="generatorUI_tryAgain_title">I don't like it...</h1>
+                <h2 class="generatorUI_tryAgain_subtitle">Click here and try again</h2>
+            </div>
+            <div class="generatorUI_nameproposal">
+                <img class="generatorUI_nameproposal_IMG" id="generatorIcon" src="IMG/baby-girl.png">
+                <h1 class="generatorUI_nameproposal_title">Click me to choose a name !</h1>
+                <h2 class="generatorUI_nameproposal_subtitle"><span class="nameProposal"></span></h2>
+            </div>
+            <div class="generatorUI_approved">
+                <img class="generatorUI_approved_IMG"src="IMG/favourite.png">
+                <h1 class="generatorUI_approved_title">I love it!</h1>
+                <h2 class="generatorUI_approved_subtitle">Looks like we have a perfect name!</h2>
+            </div>
+        </section>
+    </div>
+    <div class="popUp">
+        <h1>Oooppss!</h1>
+        <h2>Remember, without clicking the baby icon, I cannot generate the name for You.</h2>
+        <h3>Before going further, remember to click the icon.</h3>
+        <img src="IMG/cancel.png" class="cancel">
+        <img src="IMG/oops.png" class="sadFace">
+    </div>
+</section>
+<section class="finalScreen">
+    <div class="finalScreen_wrap">
+        <h1 class="finalScreen_wrapTitle">congratulations!</h1>
+        <h2 class="finalScreen_wrapSubtitle">Your baby girl's name is :</h2>
+    </div>
+    <span class="finalName"> - generated name - </span>
+    <img id ="finalIcon" src="/IMG/baby-girl_BIG.png">
+</section>
+<footer>
+    <div>All the icons used for the website made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
